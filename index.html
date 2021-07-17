@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div id="general">
+        <form>
+            <label>Tamaño de la descarga:
+                <input type="text" name="tamaño" id="cantidadtamaño" value=""></label>
+                <label><input id="tamañomb" type="radio" name="tamaño" value="mb">MB</label>
+                <label><input id="tamañogb" type="radio" name="tamaño" value="gb">GB</label>
+            <br>
+            <label>Velocidad de tu internet:
+                <input type="text" name="velocidad" id="cantidadvelocidad" value=""></label>
+                <label><input id="velocidadkb" type="radio" name="velocidad" value="kbs">KB/s</label>
+                <label><input id="velocidadmb" type="radio" name="velocidad" value="mbs">MB/s</label>
+            <hr>
+            <input type="button" value="Calcular" onclick="cambiar()">
+        </form>
+    </div>
+    <label class="resultado"></label>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

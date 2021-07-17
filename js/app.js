@@ -1,3 +1,44 @@
+const GG = document.querySelector(".resultado");
+
+function datos() {
+    sizetamaño = document.getElementById("cantidadtamaño").value;
+    sizevelocidad = document.getElementById("cantidadvelocidad").value;
+
+    sizegeneral = "";
+    let sizemb = document.getElementById("tamañomb");
+    let sizegb = document.getElementById("tamañogb");
+
+    if (sizemb.checked) {
+        sizegeneral = sizemb.value;
+    } else if (sizegb.checked) {
+        sizegeneral = sizegb.value;
+    }
+
+    vdgeneral = "";
+    let vdownloadkb = document.getElementById("velocidadkb");
+    let vdownloadmb = document.getElementById("velocidadmb");
+
+    if (vdownloadkb.checked) {
+        vdgeneral = vdownloadkb.value;
+    } else if (vdownloadmb.checked) {
+        vdgeneral = vdownloadmb.value;
+    }
+}
+
+function calc() {
+    if (sizegeneral == "mb" && vdgeneral == "kbs") {
+        resultado = sizetamaño / (sizevelocidad / 1024);
+    } else if (sizegeneral == "mb" && vdgeneral == "mbs") {
+        resultado = sizetamaño / sizevelocidad;
+    } else if (sizegeneral == "gb" && vdgeneral == "kbs") {
+        resultado = (sizetamaño * 1024) / (sizevelocidad / 1024);
+    } else if (sizegeneral == "gb" && vdgeneral == "mbs") {
+        resultado = (sizetamaño * 1024) / sizevelocidad;
+    } else {
+        alert("No se ha encontrado la operación");
+    }
+}
+
 function segundosTiempo(segundos) {
     var horas = Math.floor(segundos / 3600);
     horas = (horas < 10) ? '0' + horas : horas;
@@ -8,24 +49,10 @@ function segundosTiempo(segundos) {
     return horas + ':' + minutos + ':' + segundero;
 }
 
-let bitsize = prompt("Tamaño del archivo en: 1: MB ó 2:GB ");
-let tamaño = prompt("¿Cuanto ocupa el archivo?: ");
-let vdescarga = prompt("Velocidad de tu internet en: 1: KB/s ó 2: MB/s");
-let velocidad = prompt("¿Velocidad de tu internet?: ");
 
-if (bitsize == 1 && vdescarga == 1) {
-    resultado = tamaño / (velocidad / 1024);
-} else if (bitsize == 1 && vdescarga == 2) {
-    resultado = tamaño / velocidad;
-} else if (bitsize == 2 && vdescarga == 1) {
-    resultado = (tamaño * 1024) / (velocidad / 1024);
-} else if (bitsize == 2 && vdescarga == 2) {
-    resultado = (tamaño * 1024) / vdescarga;
+function cambiar() {
+    datos();
+    calc();
+    resHoras = segundosTiempo(resultado);
+    GG.innerHTML = resHoras;
 }
-else {
-    alert ("No se ha encontrado la operación");
-}
-
-let resHoras = segundosTiempo(resultado);
-
-document.write("La descarga se completará en " + (resHoras));

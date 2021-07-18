@@ -50,7 +50,8 @@ function segundosTiempo(segundos) {
     minutos = (minutos < 10) ? '0' + minutos : minutos;
     var segundero = segundos % 60;
     segundero = (segundero < 10) ? '0' + segundero : segundero;
-    return horas + ':' + minutos + ':' + segundero;
+    redondearsegundos = Math.round(segundero);
+    return horas + ':' + minutos + ':' + redondearsegundos;
 }
 
 

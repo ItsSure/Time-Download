@@ -1,4 +1,8 @@
-const GG = document.querySelector(".resultado");
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+  }
+
+const GG = document.getElementById("resultado");
 
 function datos() {
     sizetamaño = document.getElementById("cantidadtamaño").value;

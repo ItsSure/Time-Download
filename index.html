@@ -5,27 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Time Download</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <meta name="apple-mobile-web-app-title" content="Time Download">
+    <meta name="application-name" content="Time Download">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-startup-image" href="img/favicon_io/home.png">
 </head>
 
 <body>
+
     <div id="general">
-        <form>
-            <label>Tamaño de la descarga:
-                <input type="text" name="tamaño" id="cantidadtamaño" value=""></label>
+        <header id="header">
+            <img id="logo" src="/img/favicon_io/android-chrome-192x192.png" alt="">
+            <h1>Time Download</h1>
+        </header>
+
+        <section id="formulario">
+            <form>
+
+                <label class="titulos">Tamaño Archivo</label>
+                <span class="textbox"><input class="cajastext" type="text" name="tamaño" id="cantidadtamaño"
+                        value=""></span>
                 <label><input id="tamañomb" type="radio" name="tamaño" value="mb">MB</label>
                 <label><input id="tamañogb" type="radio" name="tamaño" value="gb">GB</label>
-            <br>
-            <label>Velocidad de tu internet:
-                <input type="text" name="velocidad" id="cantidadvelocidad" value=""></label>
+                <label class="titulos">Velocidad</label>
+                <span class="textbox"><input class="cajastext" type="text" name="velocidad" id="cantidadvelocidad"
+                        value=""></span>
                 <label><input id="velocidadkb" type="radio" name="velocidad" value="kbs">KB/s</label>
                 <label><input id="velocidadmb" type="radio" name="velocidad" value="mbs">MB/s</label>
-            <hr>
-            <input type="button" value="Calcular" onclick="cambiar()">
-        </form>
+            </form>
+            <span class="textbox"><input id="boton" type="button" value="Calcular" onclick="cambiar()"></span>
+            <label class="final">El tiempo para completar la descarga es: </label>
+            <label class="final" id="resultado"></label>
+        </section>
+
+
+
+        <footer class="pie">
+            Todos los derechos reservados &copy; Jhonatan Petro
+        </footer>
     </div>
-    <label class="resultado"></label>
+
     <script src="js/app.js"></script>
 </body>
 

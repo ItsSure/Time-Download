@@ -1,9 +1,10 @@
-const CACHE_NAME = "v1_cache_TD",
+const CACHE_NAME = "v2_cache_TD",
     urlsToCache = [
         "./",
         "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
         "/css/style.css",
         "/img/favicon_io/android-chrome-192x192.png",
+        "/img/favicon_io/android-chrome-512x512.png",
         "/js/app.js",
         "/img/favicon_io/favicon.ico",
         "/index.html",

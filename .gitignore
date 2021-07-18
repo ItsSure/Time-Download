@@ -1,1 +1,6 @@
 firebase-debug.log
+.firebaserc
+firebase.json
+/.github/workflows
+/public
+/.firebase

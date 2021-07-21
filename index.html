@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Time Download</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon.ico">
@@ -40,13 +40,13 @@
             <form>
 
                 <label class="titulos">Tamaño Archivo</label>
-                <span class="textbox"><input class="cajastext" type="text" name="tamaño" id="cantidadtamaño"
-                        value=""></span>
+                <span class="textbox"><input class="cajastext" inputmode="numeric" pattern="[0-9]*" type="text"
+                        name="tamaño" id="cantidadtamaño" value=""></span>
                 <label><input id="tamañomb" type="radio" name="tamaño" value="mb">MB</label>
                 <label><input id="tamañogb" type="radio" name="tamaño" value="gb">GB</label>
                 <label class="titulos">Velocidad</label>
-                <span class="textbox"><input class="cajastext" type="text" name="velocidad" id="cantidadvelocidad"
-                        value=""></span>
+                <span class="textbox"><input class="cajastext" inputmode="numeric" pattern="[0-9]*" type="text"
+                        name="velocidad" id="cantidadvelocidad" value=""></span>
                 <label><input id="velocidadkb" type="radio" name="velocidad" value="kbs">KB/s</label>
                 <label><input id="velocidadmb" type="radio" name="velocidad" value="mbs">MB/s</label>
             </form>

@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js')
-  }
+}
 
 const GG = document.getElementById("resultado");
 
@@ -48,10 +48,9 @@ function segundosTiempo(segundos) {
     horas = (horas < 10) ? '0' + horas : horas;
     var minutos = Math.floor((segundos / 60) % 60);
     minutos = (minutos < 10) ? '0' + minutos : minutos;
-    var segundero = segundos % 60;
+    var segundero = Math.floor(segundos % 60);
     segundero = (segundero < 10) ? '0' + segundero : segundero;
-    redondearsegundos = Math.round(segundero);
-    return horas + ':' + minutos + ':' + redondearsegundos;
+    return horas + ':' + minutos + ':' + segundero;
 }
 
 

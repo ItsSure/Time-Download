@@ -4,3 +4,5 @@ firebase.json
 /.github/workflows
 /public
 /.firebase
+manifest.json
+sw.js
